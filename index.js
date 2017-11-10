@@ -20,3 +20,18 @@ app.listen(app.get('port'), function() {
 
 // This file is what handles incoming requests and
 // serves files to the browser, or executes server-side code
+app.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
+app.get('/about', function(request, response) {
+  response.render('pages/about');
+});
+
+app.get('/projects', function(request, response) {
+  response.render('pages/projects');
+});
+
+app.get('/contact', function(request, response) {
+  response.render('pages/contact');
+});
